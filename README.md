@@ -1,61 +1,67 @@
-<<<<<<< Updated upstream
-# MangaList
-=======
-# MangaList
+# MangaVault
 
-Um rastreador pessoal de mangás, manhwas e manhuas com interface inspirada em galáxias. Totalmente offline, sem login, sem backend — cada entrada fica no `localStorage` do seu navegador.
+A personal manga, manhwa & manhua tracker with a galaxy-inspired UI. Fully offline,
+no login, no backend — every entry lives in your browser's `localStorage`.
 
-## Funcionalidades
+## Features
 
-- Adicione entradas com título, país de origem (Japonês / Coreano / Chinês), status de leitura (lendo / completo / pausado / abandonado), nota (0–10, decimais permitidos, via slider animado), review pessoal, capítulos lidos e imagem de capa
-- Edite ou exclua qualquer entrada
-- Dashboard com total de mangás cadastrados, total de capítulos lidos e nota média
-- Galeria da biblioteca com busca por título, filtros por país e status de leitura, e ordenação (maior/menor nota, A-Z, Z-A, mais recente), grid responsivo de 2/3/4 colunas
-- Página inicial com destaque para os 5 títulos mais bem avaliados e gráfico de distribuição de notas (Recharts)
-- Página de detalhes com badges de status, país e nota, e review completa
-- Imagens de capa armazenadas em base64 diretamente no `localStorage`
-- Transições de página animadas e entradas escalonadas dos cards (Framer Motion)
-- Interface toda em português brasileiro (pt-BR)
-- Entradas salvas antes do campo status existir assumem "Completo" como padrão
+- Add entries with title, origin country (Japanese / Korean / Chinese), reading
+  status (lendo / completo / pausado / abandonado), score (0–10, decimals allowed,
+  set via an animated slider), a personal review, chapters read, and a cover image
+- Edit or delete any entry
+- Dashboard with total manga logged, total chapters read, and average score
+- Library gallery with search by title, filters by country and reading status, and
+  sorting (highest/lowest score, A-Z, Z-A, most recent), responsive 2/3/4-column grid
+- Home page highlights the top 5 highest-rated entries and a score distribution
+  chart (Recharts)
+- Dedicated detail page with status/country/score badges and the full review
+- Cover images are stored as base64, directly in `localStorage`
+- Animated page transitions and staggered card entrances (Framer Motion)
+- All UI text is in Brazilian Portuguese (pt-BR)
+- Entries saved before the status field existed default to "Completo"
 
-## Rotas
+## Routes
 
-| Rota | Página |
+| Route | Page |
 | --- | --- |
-| `/` | Home — hero, stats, prévia dos mais bem avaliados |
-| `/biblioteca` | Biblioteca — galeria completa |
-| `/adicionar` | Formulário de adição |
-| `/editar/:id` | Formulário de edição |
-| `/manga/:id` | Página de detalhes |
+| `/` | Home — hero, stats, top-rated preview |
+| `/biblioteca` | Library — full gallery |
+| `/adicionar` | Add manga form |
+| `/editar/:id` | Edit manga form |
+| `/manga/:id` | Manga detail page |
 
-Uma navbar fixa (Início / Biblioteca) está presente em todas as rotas. O roteamento usa `HashRouter` para que links diretos funcionem em hosts estáticos sem regras de reescrita no servidor.
+A fixed navbar (Início / Biblioteca) is present on every route. Routing uses
+`HashRouter` so deep links keep working on static hosts with no server-side
+rewrite rules.
 
-## Stack
+## Tech stack
 
 - React + Vite
 - React Router (`HashRouter`)
-- Tailwind CSS v4 (tema galaxy customizado: pretos do espaço profundo, roxos cósmicos, acentos neon violeta/ciano)
-- Framer Motion para animações
-- Recharts para o gráfico de distribuição de notas
-- Lucide React para ícones
+- Tailwind CSS v4 (custom galaxy theme: deep space blacks, cosmic purples, neon
+  violet/cyan accents)
+- Framer Motion for animations
+- Recharts for the score distribution chart
+- Lucide React for icons
 
-## Como rodar
+## Getting started
 
 ```bash
 npm install
 npm run dev
 ```
 
-Abra a URL local exibida no terminal.
+Then open the printed local URL in your browser.
 
 ## Scripts
 
-- `npm run dev` — inicia o servidor de desenvolvimento
-- `npm run build` — build de produção
-- `npm run preview` — prévia do build de produção
-- `npm run lint` — executa o ESLint
+- `npm run dev` — start the dev server
+- `npm run build` — production build
+- `npm run preview` — preview the production build
+- `npm run lint` — run ESLint
 
-## Dados e privacidade
+## Data & privacy
 
-Todos os dados — incluindo imagens de capa — ficam no `localStorage` do seu navegador. Nada é enviado a lugar nenhum. Limpar o armazenamento do navegador para este site apagará sua coleção.
->>>>>>> Stashed changes
+All data — including cover images — stays in your browser's `localStorage`. Nothing
+is sent anywhere. Clearing your browser storage for this site will erase your
+collection.
